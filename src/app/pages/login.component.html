@@ -8,16 +8,20 @@
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
                 <div class="input-group mb-1">
-                  <span class="input-group-addon"><i class="icon-user"></i></span >
-                  <input type="text" class="form-control" placeholder="Username">
+                  <span class="input-group-addon">
+                    <i class="icon-user"></i>
+                  </span >
+                  <input type="text" class="form-control" placeholder="Username" [(ngModel)] ='username' [ngModelOptions]="{standalone:true}">
                 </div>
                 <div class="input-group mb-2">
-                  <span class="input-group-addon"><i class="icon-lock"></i></span>
-                  <input type="password" class="form-control" placeholder="Password">
+                  <span class="input-group-addon">
+                    <i class="icon-lock"></i>
+                  </span>
+                  <input type="password" class="form-control" placeholder="Password"[(ngModel)] ='password' [ngModelOptions]="{standalone:true}">
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <button type="button" class="btn btn-primary px-2">Login</button>
+                    <button type="button" class="btn btn-primary px-2"(click)='validateUser()'>Login</button>
                   </div>
                   <div class="col-6 text-right">
                     <button type="button" class="btn btn-link px-0">Forgot password?</button>
